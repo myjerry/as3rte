@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+as3rte - Rich Text Editor for Adobe AIR
+Copyright (C) 2011, myJerry Developers
+http://www.myjerry.org/as3rte
+
+The file is licensed under the the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					  xmlns:s="library://ns.adobe.com/flex/spark" 
+					  xmlns:mx="library://ns.adobe.com/flex/mx" 
+					  width="100%" height="100%" 
+					  xmlns:as3rte="org.myjerry.as3rte.*" >
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.managers.PopUpManager;
+			
+			import org.myjerry.as3rte.ui.CreateLinkPopup;
+			import org.myjerry.as3rte.ui.InsertImagePopup;
+			
+			import spark.components.TitleWindow;
+			
+			private function onInit():void {
+				this.rteStack.selectedChild = this.rteView;
+			}
+			
+			private function switchSourceView():void {
+				if(this.rteStack.selectedChild == this.rteView) {
+					this.sourceText.text = this.richTextPane.source;
+					this.rteStack.selectedChild = this.sourceView;
+				} else if(this.rteStack.selectedChild == this.sourceView) {
+					this.richTextPane.htmlText = this.sourceText.text;
+					this.rteStack.selectedChild = this.rteView;
+				}
+			}
+			
+			private function newPage():void {
+				this.richTextPane.newPage();
+			}
+			
+			private function createHyperLink():void {
+				var p:CreateLinkPopup = new CreateLinkPopup();
+				p.linkParent(this.richTextPane);
+				PopUpManager.addPopUp(p, this, true);
+				PopUpManager.centerPopUp(p);
+			}
+			
+			private function findOrReplaceText(enableReplace:Boolean):void {
+				notYetImplemented();
+			}
+			
+			private function createAnchor():void {
+				notYetImplemented();
+			}
+			
+			private function insertImage():void {
+				var p:InsertImagePopup = new InsertImagePopup();
+				p.linkParent(this.richTextPane);
+				PopUpManager.addPopUp(p, this, true);
+				PopUpManager.centerPopUp(p);
+			}
+			
+			private function insertFlash():void {
+				notYetImplemented();
+			}
+			
+			private function insertTable():void {
+				notYetImplemented();
+			}
+			
+			private function insertSmiley():void {
+				notYetImplemented();
+			}
+			
+			private function insertSpecialCharacter():void {
+				notYetImplemented();
+			}
+			
+			private function loadTemplate():void {
+				notYetImplemented();
+			}
+			
+			private function notYetImplemented():void {
+				Alert.show('not yet implemented');
+			}
+		]]>
+	</fx:Script>
+	
+	<s:layout>
+		<s:VerticalLayout paddingTop="5" paddingBottom="5" paddingLeft="5" paddingRight="5"/>
+	</s:layout>
+	
+	<s:HGroup width="100%" height="25">
+		<s:Button label="Source" styleName="sourceButton" width="16" height="16" buttonMode="true" click="this.switchSourceView()" skinClass="org.myjerry.as3rte.IconButtonSkin" />
+		<s:Button label="Save" styleName="saveButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" />
+		<s:Button label="New" styleName="newPageButton" width="16" height="16" buttonMode="true" click="newPage()" skinClass="org.myjerry.as3rte.IconButtonSkin" />
+		<s:Button label="Preview" styleName="previewButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" />
+		<s:Button label="Templates" styleName="templatesButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.loadTemplate();"/>
+		<s:Button label="Cut" styleName="cutButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.cutContent();"/>
+		<s:Button label="Copy" styleName="copyButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.copyContent();"/>
+		<s:Button label="Paste" styleName="pasteButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.pasteContent();" />
+		<s:Button label="Paste as text" styleName="pasteAsTextButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.pasteContentAsPlainText();" />
+		<s:Button label="Paste from word" styleName="pasteAsWordButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.pasteContentFromWord();" />
+		<s:Button label="Print" styleName="printButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.printContents();"/>
+		<s:Button label="Spell Check" styleName="spellCheckButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.spellCheckContents();" />
+		<s:Button label="Spell Check as you type" />
+		<s:Button label="Undo" styleName="undoButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.undo();" />
+		<s:Button label="Redo" styleName="redoButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.redo();" />
+		<s:Button label="Find" styleName="findButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.findOrReplaceText(false);" />
+		<s:Button label="Replace" styleName="replaceButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.findOrReplaceText(true);" />
+		<s:Button label="Select All" styleName="selectAllButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.selectAllContent();"/>
+		<s:Button label="Remove Format" styleName="removeFormatButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.removeFormatting();"/>
+	</s:HGroup>
+	
+	<s:HGroup width="100%" height="25">
+		<s:Button label="Bold" styleName="boldButton" width="16" height="16" buttonMode="true" click="this.richTextPane.doBold()" skinClass="org.myjerry.as3rte.IconButtonSkin" />
+		<s:Button label="Italic" styleName="italicButton" width="16" height="16" buttonMode="true" click="this.richTextPane.doItalic()" skinClass="org.myjerry.as3rte.IconButtonSkin" />
+		<s:Button label="Underline" styleName="underlineButton" width="16" height="16" buttonMode="true" click="this.richTextPane.doUnderline()" skinClass="org.myjerry.as3rte.IconButtonSkin" />
+		<s:Button label="Strikethrough" styleName="strikeThroughButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.strikeThrough();"/>
+		<s:Button label="Subscript" styleName="subscriptButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.subScript();" />
+		<s:Button label="Superscript" styleName="superscriptButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.superScript();" />
+		<s:Button label="Ordered List" styleName="numberedListButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.insertRemoveNumberedList();"/>
+		<s:Button label="Unordered List" styleName="bulletedListButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.insertRemoveUnorderedList();"/>
+		<s:Button label="Outdent" styleName="outdentButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.decreaseIndent();" />
+		<s:Button label="Indent" styleName="indentButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.increaseIndent();" />
+		<s:Button label="Blockquote" styleName="blockQuoteButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.blockQuote();"/>
+		<s:Button label="Container" click="this.richTextPane.createDIVContainer();"/>
+		<s:Button label="Left Align" styleName="leftAlignButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.leftAlign();" />
+		<s:Button label="Center Align" styleName="middleAlignButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.centerAlign();" />
+		<s:Button label="Right Align" styleName="rightAlignButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.rightAlign();" />
+		<s:Button label="Justify" styleName="justifyButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.justifyAlign();" />
+		<s:Button label="Link" styleName="linkButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.createHyperLink()" />
+		<s:Button label="Unlink" styleName="unlinkButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.unlink();"/>
+		<s:Button label="Anchor" styleName="anchorButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.createAnchor();"/>
+		<s:Button label="Image" styleName="imageButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.insertImage();"/>
+		<s:Button label="Flash" styleName="flashButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.insertFlash();"/>
+		<s:Button label="Table" styleName="tableButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.insertTable();"/>
+		<s:Button label="Insert Horizontal Rule" styleName="horizontalRuleButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.insertHorizontalRule();"/>
+		<s:Button label="Smiley" styleName="smileyButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.insertSmiley();"/>
+		<s:Button label="Special Char" styleName="specialCharacterButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.insertSpecialCharacter();"/>
+		<s:Button label="Page Break" styleName="pageBreakButton" width= "16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.insertPageBreak();" />
+	</s:HGroup>
+	
+	<s:HGroup width="100%" height="25">
+		<s:Button label="Styles" />
+		<s:Button label="Heading" />
+		<s:Button label="Font" />
+		<s:Button label="Size" />
+		<s:Button label="Text Color" />
+		<s:Button label="Background Color" />
+		<s:Button label="Maximize" styleName="maximizeButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" />
+		<s:Button label="Show Blocks" styleName="showBlocksButton" width="16" height="16" buttonMode="true" skinClass="org.myjerry.as3rte.IconButtonSkin" click="this.richTextPane.showHideBlocks();"/>
+	</s:HGroup>
+	
+	<mx:ViewStack id="rteStack" width="100%" height="100%" creationPolicy="all">
+		<s:NavigatorContent id="rteView" width="100%" height="100%">
+			<as3rte:RichTextHTML id="richTextPane" width="100%" height="100%" borderStyle="solid" borderColor="0x000000"/>
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent id="sourceView" width="100%" height="100%">
+			<s:TextArea id="sourceText" width="100%" height="100%" />
+		</s:NavigatorContent>
+	</mx:ViewStack>
+</s:SkinnableContainer>

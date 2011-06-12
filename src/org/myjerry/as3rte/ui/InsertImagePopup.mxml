@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+as3rte - Rich Text Editor for Adobe AIR
+Copyright (C) 2011, myJerry Developers
+http://www.myjerry.org/as3rte
+
+The file is licensed under the the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" 
+			   width="400" height="120"
+			   title="Insert Image"
+			   close="windowCloseHandler(event)" >
+
+	<fx:Script>
+		<![CDATA[
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+			
+			import org.myjerry.as3rte.RichTextHTML;
+			
+			private var parentHTML:RichTextHTML = null;
+			
+			public function linkParent(parentHTML:RichTextHTML):void {
+				this.parentHTML = parentHTML;
+			}
+			
+			protected function windowCloseHandler(event:CloseEvent):void {
+				PopUpManager.removePopUp(this);
+			}
+
+			protected function insertButtonClickHandler(event:MouseEvent):void {
+				if(this.parentHTML != null) {
+					this.parentHTML.insertImage(this.imageURL.text);
+				}
+				windowCloseHandler(null);
+			}
+			
+			protected function cancelButtonClickHandler(event:MouseEvent):void {
+				windowCloseHandler(null);
+			}
+		]]>
+	</fx:Script>
+	
+	<s:layout>
+		<s:VerticalLayout paddingTop="5" paddingBottom="5" paddingLeft="5" paddingRight="5"/>
+	</s:layout>
+	
+	<s:Label text="URL" />
+	<s:TextInput id="imageURL" width="100%" />
+
+	<s:HGroup width="100%">
+		<mx:Spacer width="100%" />
+		<s:Button label="Insert" click="insertButtonClickHandler(event)"/>
+		<mx:Spacer width="10" />
+		<s:Button label="Cancel" click="cancelButtonClickHandler(event)"/>
+	</s:HGroup>
+	
+</s:TitleWindow>

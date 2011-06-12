@@ -1,0 +1,316 @@
+/* CSS file */
+
+.anchorButton {
+	iconSource: Embed(source="images/anchor.png");
+	overSkin: Embed(source="images/anchor.png");
+	downSkin: Embed(source="images/anchor.png");
+	disabledSkin: Embed(source="images/anchor.png");
+}
+
+.blockQuoteButton {
+	iconSource: Embed(source="images/blockQuote.png");
+	overSkin: Embed(source="images/blockQuote.png");
+	downSkin: Embed(source="images/blockQuote.png");
+	disabledSkin: Embed(source="images/blockQuote.png");
+}
+
+.boldButton {
+	iconSource: Embed(source="images/bold.png");
+	overSkin: Embed(source="images/bold.png");
+	downSkin: Embed(source="images/bold.png");
+	disabledSkin: Embed(source="images/bold.png");
+}
+
+.bulletedListButton {
+	iconSource: Embed(source="images/bulletedList.png");
+	overSkin: Embed(source="images/bulletedList.png");
+	downSkin: Embed(source="images/bulletedList.png");
+	disabledSkin: Embed(source="images/bulletedList.png");
+}
+
+.copyButton {
+	iconSource: Embed(source="images/copy.png");
+	overSkin: Embed(source="images/copy.png");
+	downSkin: Embed(source="images/copy.png");
+	disabledSkin: Embed(source="images/copy.png");
+}
+
+.cutButton {
+	iconSource: Embed(source="images/cut.png");
+	overSkin: Embed(source="images/cut.png");
+	downSkin: Embed(source="images/cut.png");
+	disabledSkin: Embed(source="images/cut.png");
+}
+
+.findButton {
+	iconSource: Embed(source="images/find.png");
+	overSkin: Embed(source="images/find.png");
+	downSkin: Embed(source="images/find.png");
+	disabledSkin: Embed(source="images/find.png");
+}
+
+.flashButton {
+	iconSource: Embed(source="images/flash.png");
+	overSkin: Embed(source="images/flash.png");
+	downSkin: Embed(source="images/flash.png");
+	disabledSkin: Embed(source="images/flash.png");
+}
+
+.horizontalRuleButton {
+	iconSource: Embed(source="images/horizontalRule.png");
+	overSkin: Embed(source="images/horizontalRule.png");
+	downSkin: Embed(source="images/horizontalRule.png");
+	disabledSkin: Embed(source="images/horizontalRule.png");
+}
+
+.imageButton {
+	iconSource: Embed(source="images/image.png");
+	overSkin: Embed(source="images/image.png");
+	downSkin: Embed(source="images/image.png");
+	disabledSkin: Embed(source="images/image.png");
+}
+
+.indentButton {
+	iconSource: Embed(source="images/indent.png");
+	overSkin: Embed(source="images/indent.png");
+	downSkin: Embed(source="images/indent.png");
+	disabledSkin: Embed(source="images/indent.png");
+}
+
+.italicButton {
+	iconSource: Embed(source="images/italic.png");
+	overSkin: Embed(source="images/italic.png");
+	downSkin: Embed(source="images/italic.png");
+	disabledSkin: Embed(source="images/italic.png");
+}
+
+.justifyButton {
+	iconSource: Embed(source="images/justify.png");
+	overSkin: Embed(source="images/justify.png");
+	downSkin: Embed(source="images/justify.png");
+	disabledSkin: Embed(source="images/justify.png");
+}
+
+.leftAlignButton {
+	iconSource: Embed(source="images/leftAlign.png");
+	overSkin: Embed(source="images/leftAlign.png");
+	downSkin: Embed(source="images/leftAlign.png");
+	disabledSkin: Embed(source="images/leftAlign.png");
+}
+
+.linkButton {
+	iconSource: Embed(source="images/link.png");
+	overSkin: Embed(source="images/link.png");
+	downSkin: Embed(source="images/link.png");
+	disabledSkin: Embed(source="images/link.png");
+}
+
+.maximizeButton {
+	iconSource: Embed(source="images/maximize.png");
+	overSkin: Embed(source="images/maximize.png");
+	downSkin: Embed(source="images/maximize.png");
+	disabledSkin: Embed(source="images/maximize.png");
+}
+
+.middleAlignButton {
+	iconSource: Embed(source="images/middleAlign.png");
+	overSkin: Embed(source="images/middleAlign.png");
+	downSkin: Embed(source="images/middleAlign.png");
+	disabledSkin: Embed(source="images/middleAlign.png");
+}
+
+.newPageButton {
+	iconSource: Embed(source="images/newPage.png");
+	overSkin: Embed(source="images/newPage.png");
+	downSkin: Embed(source="images/newPage.png");
+	disabledSkin: Embed(source="images/newPage.png");
+}
+
+.numberedListButton {
+	iconSource: Embed(source="images/numberedList.png");
+	overSkin: Embed(source="images/numberedList.png");
+	downSkin: Embed(source="images/numberedList.png");
+	disabledSkin: Embed(source="images/numberedList.png");
+}
+
+.outdentButton {
+	iconSource: Embed(source="images/outdent.png");
+	overSkin: Embed(source="images/outdent.png");
+	downSkin: Embed(source="images/outdent.png");
+	disabledSkin: Embed(source="images/outdent.png");
+}
+
+.pageBreakButton {
+	iconSource: Embed(source="images/pageBreak.png");
+	overSkin: Embed(source="images/pageBreak.png");
+	downSkin: Embed(source="images/pageBreak.png");
+	disabledSkin: Embed(source="images/pageBreak.png");
+}
+
+.pasteButton {
+	iconSource: Embed(source="images/paste.png");
+	overSkin: Embed(source="images/paste.png");
+	downSkin: Embed(source="images/paste.png");
+	disabledSkin: Embed(source="images/paste.png");
+}
+
+.pasteAsTextButton {
+	iconSource: Embed(source="images/pasteAsText.png");
+	overSkin: Embed(source="images/pasteAsText.png");
+	downSkin: Embed(source="images/pasteAsText.png");
+	disabledSkin: Embed(source="images/pasteAsText.png");
+}
+
+.pasteAsWordButton {
+	iconSource: Embed(source="images/pasteAsWord.png");
+	overSkin: Embed(source="images/pasteAsWord.png");
+	downSkin: Embed(source="images/pasteAsWord.png");
+	disabledSkin: Embed(source="images/pasteAsWord.png");
+}
+
+.previewButton {
+	iconSource: Embed(source="images/preview.png");
+	overSkin: Embed(source="images/preview.png");
+	downSkin: Embed(source="images/preview.png");
+	disabledSkin: Embed(source="images/preview.png");
+}
+
+.printButton {
+	iconSource: Embed(source="images/print.png");
+	overSkin: Embed(source="images/print.png");
+	downSkin: Embed(source="images/print.png");
+	disabledSkin: Embed(source="images/print.png");
+}
+
+.redoButton {
+	iconSource: Embed(source="images/redo.png");
+	overSkin: Embed(source="images/redo.png");
+	downSkin: Embed(source="images/redo.png");
+	disabledSkin: Embed(source="images/redo.png");
+}
+
+.removeFormatButton {
+	iconSource: Embed(source="images/removeFormat.png");
+	overSkin: Embed(source="images/removeFormat.png");
+	downSkin: Embed(source="images/removeFormat.png");
+	disabledSkin: Embed(source="images/removeFormat.png");
+}
+
+.replaceButton {
+	iconSource: Embed(source="images/replace.png");
+	overSkin: Embed(source="images/replace.png");
+	downSkin: Embed(source="images/replace.png");
+	disabledSkin: Embed(source="images/replace.png");
+}
+
+.rightAlignButton {
+	iconSource: Embed(source="images/rightAlign.png");
+	overSkin: Embed(source="images/rightAlign.png");
+	downSkin: Embed(source="images/rightAlign.png");
+	disabledSkin: Embed(source="images/rightAlign.png");
+}
+
+.saveButton {
+	iconSource: Embed(source="images/save.png");
+	overSkin: Embed(source="images/save.png");
+	downSkin: Embed(source="images/save.png");
+	disabledSkin: Embed(source="images/save.png");
+}
+
+.selectAllButton {
+	iconSource: Embed(source="images/selectAll.png");
+	overSkin: Embed(source="images/selectAll.png");
+	downSkin: Embed(source="images/selectAll.png");
+	disabledSkin: Embed(source="images/selectAll.png");
+}
+
+.showBlocksButton {
+	iconSource: Embed(source="images/showBlocks.png");
+	overSkin: Embed(source="images/showBlocks.png");
+	downSkin: Embed(source="images/showBlocks.png");
+	disabledSkin: Embed(source="images/showBlocks.png");
+}
+
+.smileyButton {
+	iconSource: Embed(source="images/smiley.png");
+	overSkin: Embed(source="images/smiley.png");
+	downSkin: Embed(source="images/smiley.png");
+	disabledSkin: Embed(source="images/smiley.png");
+}
+
+.sourceButton {
+	iconSource: Embed(source="images/source.png");
+	overSkin: Embed(source="images/source.png");
+	downSkin: Embed(source="images/source.png");
+	disabledSkin: Embed(source="images/source.png");
+}
+
+.specialCharacterButton {
+	iconSource: Embed(source="images/specialCharacter.png");
+	overSkin: Embed(source="images/specialCharacter.png");
+	downSkin: Embed(source="images/specialCharacter.png");
+	disabledSkin: Embed(source="images/specialCharacter.png");
+}
+
+.spellCheckButton {
+	iconSource: Embed(source="images/spellCheck.png");
+	overSkin: Embed(source="images/spellCheck.png");
+	downSkin: Embed(source="images/spellCheck.png");
+	disabledSkin: Embed(source="images/spellCheck.png");
+}
+
+.strikeThroughButton {
+	iconSource: Embed(source="images/strikeThrough.png");
+	overSkin: Embed(source="images/strikeThrough.png");
+	downSkin: Embed(source="images/strikeThrough.png");
+	disabledSkin: Embed(source="images/strikeThrough.png");
+}
+
+.subscriptButton {
+	iconSource: Embed(source="images/subscript.png");
+	overSkin: Embed(source="images/subscript.png");
+	downSkin: Embed(source="images/subscript.png");
+	disabledSkin: Embed(source="images/subscript.png");
+}
+
+.superscriptButton {
+	iconSource: Embed(source="images/superscript.png");
+	overSkin: Embed(source="images/superscript.png");
+	downSkin: Embed(source="images/superscript.png");
+	disabledSkin: Embed(source="images/superscript.png");
+}
+
+.tableButton {
+	iconSource: Embed(source="images/table.png");
+	overSkin: Embed(source="images/table.png");
+	downSkin: Embed(source="images/table.png");
+	disabledSkin: Embed(source="images/table.png");
+}
+
+.templatesButton {
+	iconSource: Embed(source="images/templates.png");
+	overSkin: Embed(source="images/templates.png");
+	downSkin: Embed(source="images/templates.png");
+	disabledSkin: Embed(source="images/templates.png");
+}
+
+.underlineButton {
+	iconSource: Embed(source="images/underline.png");
+	overSkin: Embed(source="images/underline.png");
+	downSkin: Embed(source="images/underline.png");
+	disabledSkin: Embed(source="images/underline.png");
+}
+
+.undoButton {
+	iconSource: Embed(source="images/undo.png");
+	overSkin: Embed(source="images/undo.png");
+	downSkin: Embed(source="images/undo.png");
+	disabledSkin: Embed(source="images/undo.png");
+}
+
+.unlinkButton {
+	iconSource: Embed(source="images/unlink.png");
+	overSkin: Embed(source="images/unlink.png");
+	downSkin: Embed(source="images/unlink.png");
+	disabledSkin: Embed(source="images/unlink.png");
+}
